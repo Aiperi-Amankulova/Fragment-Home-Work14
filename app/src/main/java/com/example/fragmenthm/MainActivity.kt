@@ -6,20 +6,14 @@ import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
-    private var btnReplace : Button? =null
     private var btnAdd : Button? =null
-    private var btnRemove : Button? =null
 
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-          
-        
+        view()
     }
 
-    private fun id() {
-        btnReplace = findViewById(R.id.btnReplace)
+    private fun view() {
         btnAdd = findViewById(R.id.btnAdd)
-        btnRemove = findViewById(R.id.btnRemove)
     }
 }
