@@ -11,12 +11,12 @@ import androidx.fragment.app.Fragment
 @Suppress("UNREACHABLE_CODE")
 class ReplaceFragement : Fragment(){
 
-    private var listener : ? =null
+    private var listener : FragmentL? =null
     private var btnReplace : Button? = null
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        listener = context as Fragmentlistener
+        listener = context as FragmentL
     }
 
     override fun onCreateView(
@@ -30,14 +30,14 @@ class ReplaceFragement : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        btnReplace = view.findViewById(R.id.btnRemove)
+        btnReplace = view.findViewById(R.id.btnReplace)
 
         click()
     }
 
     private fun click() {
         btnReplace?.setOnClickListener {
-
+            listener?.forAdd()
         }
     }
 

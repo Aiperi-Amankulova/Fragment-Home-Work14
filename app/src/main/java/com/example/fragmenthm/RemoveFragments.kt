@@ -11,12 +11,12 @@ import androidx.fragment.app.Fragment
 @Suppress("UNREACHABLE_CODE")
 class RemoveFragments : Fragment(){
 
-    private var listener : ? =null
+    private var listener : FragmentL? =null
     private var btnRemove : Button? = null
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        listener = context as Fragmentlistener
+        listener = context as FragmentL
     }
 
     override fun onCreateView(
@@ -37,9 +37,8 @@ class RemoveFragments : Fragment(){
 
     private fun click() {
         btnRemove?.setOnClickListener {
-
+            listener?.forRemove()
         }
     }
 
 }
-
